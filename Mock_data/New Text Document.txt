@@ -1,0 +1,22 @@
+1.	Zambia has 10 provinces.
+2.	Each province has:
+o	A unique two-digit NRC prefix (e.g. Copperbelt = 10)
+o	The same prefix will be used in the first 2 digits of the TPIN
+3.	You want to:
+o	Generate a random person from a province
+o	Create their NRC and TPIN using that province code
+o	Add a Province column
+________________________________________
+🧠 Mapping of Provinces (Example)
+Here's an example mapping for Zambia’s 10 provinces:
+Province	  NRC Prefix	TPIN Prefix
+Central	      01	         01
+Copperbelt	  10	         10
+Eastern	      02	         02
+Luapula	      03	         03
+Lusaka	      04	         04
+Muchinga	  05	         05
+Northern	  06	         06
+North-Western 07	         07
+Southern	  08	         08
+Western	      09	         09
