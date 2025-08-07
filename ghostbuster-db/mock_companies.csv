@@ -1,0 +1,6 @@
+id,company_name,tpin,registration_no,is_flagged,flag_reasons
+04d2d4de-fb44-4ff2-982a-6821211b4b6d,Company_A Ltd,TP243804,REG-6060,False,[]
+e736644e-2b40-455e-b24d-e51ede062866,Company_B Ltd,TP200527,REG-3140,True,[]
+28aa757f-8688-4ee9-a578-7fa82e69090e,Company_C Ltd,TP284012,REG-2374,True,[]
+0438e5c3-7a49-41a7-8507-3693a09e9dca,Company_D Ltd,TP804104,REG-9454,False,[]
+9238ad17-608f-4d37-8937-082d1e1d660e,Company_E Ltd,TP358905,REG-1487,False,[]

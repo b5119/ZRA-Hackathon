@@ -1,0 +1,24 @@
+id,company_id,name,nrc,is_valid_nrc,exists_in_napsa,is_duplicate_nrc
+0a35f619-4111-4db3-8b9d-14e3e8a3dbcb,04d2d4de-fb44-4ff2-982a-6821211b4b6d,Linda Banda,918785/14/1,True,True,False
+ac50dde2-9bb0-4846-9cff-4437eec3bf80,04d2d4de-fb44-4ff2-982a-6821211b4b6d,Alex Banda,136934/88/2,True,True,False
+a08cec04-0e61-47b6-acd4-cac4a1abb573,04d2d4de-fb44-4ff2-982a-6821211b4b6d,Linda Banda,550480/95/2,True,True,False
+c0381c19-75ce-4fc4-a216-37de0dd07aba,04d2d4de-fb44-4ff2-982a-6821211b4b6d,John Chileshe,694181/38/3,True,True,False
+5fe0f66f-f575-4880-b070-5e69713c6cc5,e736644e-2b40-455e-b24d-e51ede062866,John Lungu,784041/67/3,True,True,False
+4929e244-06d3-4416-ae82-02fdd36064c8,e736644e-2b40-455e-b24d-e51ede062866,Daniel Kunda,829405/79/3,True,True,False
+554029de-dea7-4dbf-a134-723022b9af24,e736644e-2b40-455e-b24d-e51ede062866,Linda Mwansa,534988/74/2,True,True,False
+377c92c9-a285-482c-847a-9aadf9cb0e00,e736644e-2b40-455e-b24d-e51ede062866,John Mwansa,658025/30/1,True,True,False
+88a028d5-1b51-49bc-9814-b8d2ea58812f,e736644e-2b40-455e-b24d-e51ede062866,Mary Chileshe,488041/11/2,True,True,False
+7badf583-9088-45b3-a965-658c27a0fff8,28aa757f-8688-4ee9-a578-7fa82e69090e,Peter Kunda,241519/81/1,True,True,False
+6ec759fd-49eb-4514-8c0e-79a46914a9ae,28aa757f-8688-4ee9-a578-7fa82e69090e,Alex Kunda,913581/45/3,True,True,False
+baf35974-0c18-4ec6-818b-1b2eef4137ed,28aa757f-8688-4ee9-a578-7fa82e69090e,John Ngoma,920903/19/2,True,True,False
+c3c1908c-b4d2-45da-94db-83b00ada17a1,28aa757f-8688-4ee9-a578-7fa82e69090e,Mary Ngoma,990084/81/1,True,True,False
+ac611257-4b46-4988-80b2-6e37b6de8cbe,28aa757f-8688-4ee9-a578-7fa82e69090e,Mary Phiri,556890/90/1,True,True,False
+b9d0fc78-db6e-4967-ab0c-5054a1ce1d8c,28aa757f-8688-4ee9-a578-7fa82e69090e,Daniel Tembo,851027/48/3,True,True,False
+d1204ab4-8999-4c70-8f78-dd80c86b40b2,0438e5c3-7a49-41a7-8507-3693a09e9dca,Daniel Zimba,226058/42/1,True,True,False
+4bf0b67f-01df-47bc-8541-4f008678bd48,0438e5c3-7a49-41a7-8507-3693a09e9dca,Mary Zimba,484780/93/3,True,True,False
+a250efa6-26ac-4510-a168-d1bd3434a22d,0438e5c3-7a49-41a7-8507-3693a09e9dca,Daniel Mwansa,484926/68/3,True,True,False
+2b049e57-0dbc-4d06-980a-cc58e51d7457,0438e5c3-7a49-41a7-8507-3693a09e9dca,John Kunda,286387/58/1,True,True,False
+7397e1e3-e83e-4fa0-b4bd-089853c0afc1,0438e5c3-7a49-41a7-8507-3693a09e9dca,Linda Ngoma,553018/33/2,True,True,False
+75c69637-97c1-46fd-9d11-01e6929532ec,9238ad17-608f-4d37-8937-082d1e1d660e,John Banda,584414/16/3,True,True,False
+59515e7f-945c-4680-8990-11b9e42c570a,9238ad17-608f-4d37-8937-082d1e1d660e,Grace Banda,728613/72/1,True,True,False
+9b5c83f7-507d-4414-906a-d8f1c1bafdc3,9238ad17-608f-4d37-8937-082d1e1d660e,Linda Ngoma,674474/55/1,True,True,False
