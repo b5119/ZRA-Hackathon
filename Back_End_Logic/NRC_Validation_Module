@@ -1,0 +1,77 @@
+import os
+import pandas as pd
+import re
+
+# Base directory paths
+base_path = "C:/Users/Administrator/ZRA-Hackathon/Mock_data/"
+output_dir = "C:/Users/Administrator/ZRA-Hackathon/Back_End_Logic/Processed_NRC_Statuses/"
+
+# Input file (can be swapped for any other)
+input_file = "fake_nrc_tpin_with_province.csv"
+input_path = os.path.join(base_path, input_file)
+
+# Output file
+output_file = "validated_" + input_file
+output_path = os.path.join(output_dir, output_file)
+
+# Ensure output directory exists
+os.makedirs(output_dir, exist_ok=True)
+
+# List of valid province codes used in NRC generation
+valid_province_codes = {
+    "01", "02", "03", "04", "05", "06", "07", "08", "09", "10"
+}
+
+# NRC validation function
+def validate_nrc(nrc):
+    if not isinstance(nrc, str):
+        return False
+    pattern = r"^(\d{6})/(\d{2})/(\d)$"
+    match = re.match(pattern, nrc)
+    if not match:
+        return False
+
+    prefix, year, citizenship = match.groups()
+    province_code = prefix[:2]
+
+    if province_code not in valid_province_codes:
+        return False
+    if citizenship not in ["1", "2"]:
+        return False
+
+    return True
+
+# Load and validate NRCs from file
+df = pd.read_csv(input_path)
+
+# Automatically detect the NRC column
+nrc_col = None
+for col in df.columns:
+    if "NRC" in col:
+        nrc_col = col
+        break
+
+if nrc_col:
+    df["NRC Status"] = df[nrc_col].apply(lambda x: "Valid" if validate_nrc(x) else "Fake")
+else:
+    raise ValueError("No NRC column found in the input file.")
+
+# Save the updated DataFrame
+# Count Valid and Fake NRCs
+status_counts = df["NRC Status"].value_counts().to_dict()
+
+# Create summary rows
+summary_df = pd.DataFrame([
+    {nrc_col: "", "NRC Status": "Valid", "Count": status_counts.get("Valid", 0)},
+    {nrc_col: "", "NRC Status": "Fake", "Count": status_counts.get("Fake", 0)}
+])
+
+# Pad original DataFrame with an empty "Count" column for alignment
+df["Count"] = ""
+
+# Append summary
+df = pd.concat([df, pd.DataFrame([{}]), summary_df], ignore_index=True)
+
+# Save the updated DataFrame with totals
+df.to_csv(output_path, index=False)
+print(f"Processed. Output saved to: {output_path}")
