@@ -1,0 +1,39 @@
+NRC Verification Module – Documentation
+Overview
+This Python module is designed to validate National Registration Card (NRC) numbers from a dataset. It checks each NRC entry against a predefined pattern and verifies key elements such as structure, province code, and citizenship indicator.
+Features
+•	Automatically reads a CSV file containing NRCs and other related data.
+•	Dynamically detects the column containing NRC values.
+•	Validates NRCs based on format, province code, and citizenship digit.
+•	Outputs a new CSV file indicating which NRCs are valid or fake.
+NRC Format Rule
+The module considers a valid NRC to follow this format:
+XXXXXX/YY/Z
+Where:
+•	XXXXXX is the number prefix (first two digits indicate province code).
+•	YY is the year of issue.
+•	Z is the citizenship indicator:
+o	1 for Zambians
+o	2 for residents
+Province Code Validation
+The module accepts the following valid province codes:
+01 to 10
+Any NRC with a different province code will be marked as fake.
+Output
+A new CSV file is saved to the specified output directory with an added column called NRC Status, which shows either:
+•	Valid – for NRCs that meet the validation criteria.
+•	Fake – for NRCs that do not meet the criteria.
+Usage Notes
+•	This module is flexible enough to handle variations in the name of the NRC column.
+•	It will raise an error if no NRC-related column is found.
+Customization
+You can:
+•	Change the input and output file names.
+•	Extend the validation logic to include more criteria.
+•	Modify the list of valid province codes if administrative changes occur.
+Dependencies
+•	Python 3.x
+•	pandas
+•	os
+•	re (Regular Expressions)
+
