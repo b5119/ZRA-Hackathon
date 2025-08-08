@@ -4,10 +4,10 @@ import re
 
 # Base directory paths
 base_path = "C:/Users/Administrator/ZRA-Hackathon/Mock_data/"
-output_dir = "C:/Users/Administrator/ZRA-Hackathon/Back_End_Logic/Processed_NRC_Statuses/"
+output_dir = "C:/Users/Administrator/ZRA-Hackathon/Back_End_Logic/Processed_Document_Statuses/"
 
 # Input file (can be swapped for any other)
-input_file = "fake_nrc_tpin_with_province.csv"
+input_file = "reference_nrc_dataset.csv"
 input_path = os.path.join(base_path, input_file)
 
 # Output file

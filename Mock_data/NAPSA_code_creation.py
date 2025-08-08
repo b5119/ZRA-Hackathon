@@ -27,13 +27,17 @@ def generate_fake_nrc(province_code):
 def generate_fake_tpin(province_code):
     return f"{province_code}{random.randint(100000000, 999999999)}"
 
+def generate_fake_napsa(province_code):
+    return f"{province_code}{random.randint(10000000, 99999999)}"  # 10-digit starting with province
+
 # Generate dataset
-num_records = 1000
+num_records = 100
 data = {
     "Full Name": [],
     "Province": [],
     "NRC": [],
-    "TPIN": []
+    "TPIN": [],
+    "NAPSA": []
 }
 
 for _ in range(num_records):
@@ -42,13 +46,16 @@ for _ in range(num_records):
     full_name = fake.name()
     nrc = generate_fake_nrc(province_code)
     tpin = generate_fake_tpin(province_code)
+    napsa = generate_fake_napsa(province_code)
 
     data["Full Name"].append(full_name)
     data["Province"].append(province)
     data["NRC"].append(nrc)
     data["TPIN"].append(tpin)
+    data["NAPSA"].append(napsa)
 
 # Create DataFrame and save
+output_path = "C:/Users/Administrator/ZRA-Hackathon/Mock_data/NAPSA_dataset.csv"
 df = pd.DataFrame(data)
-df.to_csv("fake_nrc_tpin_with_province.csv", index=False)
-print("✅ Dataset saved as fake_nrc_tpin_with_province.csv")
+df.to_csv(output_path, index=False)
+print(f"\u2705 Dataset saved as {output_path}")
